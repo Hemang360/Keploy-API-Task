@@ -43,3 +43,31 @@ A simple full-stack Todo application with Node.js backend and vanilla JavaScript
 - `POST /todos` - Create todo
 - `PUT /todos/:id` - Update todo
 - `DELETE /todos/:id` - Delete todo
+
+---
+
+## Testing the To-Do API
+
+### Tools Used
+- **Jest**: JavaScript testing framework for unit and integration tests
+- **Supertest**: HTTP assertions for API endpoint testing
+- **mongodb-memory-server**: In-memory MongoDB for isolated integration tests
+
+### How to Run Tests
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run all tests with coverage:
+   ```bash
+   npm test
+   ```
+
+### Test Structure
+- `tests/unit/` – Unit tests for model/database logic (mocked and real)
+- `tests/integration/` – Integration tests with in-memory MongoDB
+- `tests/api/` – API endpoint tests using Supertest
+
+### Checking Coverage
+After running `npm test`, a coverage report will be generated in the `coverage/` folder. Open `coverage/lcov-report/index.html` in your browser for a detailed view.
